@@ -41,8 +41,8 @@ public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserCon
             {
                 ddlQuyenDangNhap.SelectedValue = dt.Rows[0]["MaQuyen"].ToString();
                 tbTenDangNhap.Text = dt.Rows[0]["TenDangNhap"].ToString();
-                tbEmail.Text = dt.Rows[0]["EmailDK"].ToString(); 
-                tbDiaChi.Text = dt.Rows[0]["DiaChiDK"].ToString(); 
+                tbEmail.Text = dt.Rows[0]["EmailDK"].ToString();
+                tbDiaChi.Text = dt.Rows[0]["DiaChiDK"].ToString();
                 tbHoTen.Text = dt.Rows[0]["TenDayDu"].ToString();
                 tbNgaySinh.Text = dt.Rows[0]["NgaySinh"].ToString();
                 ddlGioiTinh.SelectedValue = dt.Rows[0]["GioiTinhDK"].ToString();
@@ -69,7 +69,7 @@ public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserCon
         for (int i = 0; i < dt.Rows.Count; i++)
         {
             ddlQuyenDangNhap.Items.Add(new ListItem(dt.Rows[i]["TenQuyen"].ToString(), dt.Rows[i]["MaQuyen"].ToString()));
-            
+
         }
     }
     protected void btThemMoi_Click(object sender, EventArgs e)
@@ -80,14 +80,14 @@ public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserCon
 
             //Mã hóa mật khẩu trước khi thêm vào database
             string matKhau = "";
-                if(matKhau != null)
-                     matKhau = Webbanhang.MaHoa.MaHoaMD5(tbMatKhau.Text);
-                 else
+            if (matKhau != null)
+                matKhau = Webbanhang.MaHoa.MaHoaMD5(tbMatKhau.Text);
+            else
                 matKhau = Webbanhang.MaHoa.MaHoaMD5(hdMatKhauCu.Value);//TRƯỜNG hợp ko nhập mật khẩu thì lấy lại mật khẩu cũ
 
             Webbanhang.DangKy.Dangky_Inser(
-                tbTenDangNhap.Text, matKhau, tbEmail.Text, 
-                tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text , 
+                tbTenDangNhap.Text, matKhau, tbEmail.Text,
+                tbDiaChi.Text, tbHoTen.Text, "", tbNgaySinh.Text,
                 ddlGioiTinh.SelectedValue, ddlQuyenDangNhap.SelectedValue, "");
             ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo tài khoản: " + tbTenDangNhap.Text + "</div>";
 
@@ -129,8 +129,8 @@ public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserCon
         tbTenDangNhap.Text = "";
         tbMatKhau.Text = "";
         tbEmail.Text = "";
-        tbDiaChi.Text="";
-        tbHoTen.Text="";
+        tbDiaChi.Text = "";
+        tbHoTen.Text = "";
         tbNgaySinh.Text = "";
 
 

@@ -20,27 +20,23 @@
 </div>
 <script type="text/javascript">
     function XoaTaiKhoan(TenDangNhap) {
-        if (confirm("Bạn chắc chắn muốn xóa tài khoản này")) {
-            //Viết code xóa màu tại đây
-
+        if (confirm("Bạn có chắc chắn muốn xóa tài khoản này ?")) {
             $.post("cms/admin/TaiKhoan/Ajax/TaiKhoan.aspx",
-                {
-                    "ThaoTac": "XoaTaiKhoan",
+                {   
+                    "ThaoTac":"XoaTaiKhoan",
                     "TenDangNhap": TenDangNhap
+                  
                 },
                 function (data, status) {
-                    //alert("Data :" + data + "\n Status :" + status);
+                    //alert("Data: " + data + "\nStatus: " + status);
                     if (data == 1) {
-                        //thực hiện thành công => ẩn dòng vừa xóa đi
+                        //Thực hiên thành công ---> ẩn dòng vừa được xóa
                         $("#maDong_" + TenDangNhap).slideUp();
-
                     }
-
-                    else
-                    {
+                    else {
                         alert(data);
                     }
                 });
         }
-    }
+   }
 </script>

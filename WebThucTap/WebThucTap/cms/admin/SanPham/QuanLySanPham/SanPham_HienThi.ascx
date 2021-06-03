@@ -12,7 +12,6 @@
            <th class="cotAnh">Ảnh đại diện</th>
            <th class="cotSoLuong">Số lượng</th>
            <th class="cotDonGia">Đơn Giá</th>
-           <th class="cotNgayTao">Ngày tạo</th>
            <th class="cotCongCu">Công cụ</th>
        </tr>
        <asp:Literal ID="ltrSanPham" runat="server"></asp:Literal>
@@ -21,22 +20,20 @@
 
 <script type="text/javascript">
     function XoaSanPham(MaSP) {
-        if (confirm("Bạn chắc chắn muốn xóa sản phẩm này")) {
-            //Viết code xóa danh mục tại đây
-
+        if (confirm("Bạn có chắc chắn muốn xóa sản phẩm này ?")) {
             $.post("cms/admin/SanPham/QuanLySanPham/Ajax/SanPham.aspx",
-                {
-                    "ThaoTac": "XoaSanPham",
+                {   
+                    "ThaoTac":"XoaSanPham",
                     "MaSP": MaSP
+                  
                 },
                 function (data, status) {
-                    //alert("Data :" + data + "\n Status :" + status);
+                    //alert("Data: " + data + "\nStatus: " + status);
                     if (data == 1) {
-                        //thực hiện thành công => ẩn dòng vừa xóa đi
+                        //Thực hiên thành công ---> ẩn dòng vừa được xóa
                         $("#maDong_" + MaSP).slideUp();
-
                     }
                 });
         }
-    }
+   }
 </script>

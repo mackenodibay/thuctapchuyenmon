@@ -10,37 +10,41 @@
 <head runat="server">
     <title>Trang Quản Trị</title>
     <link href="cms/admin/css/admin.css" rel="stylesheet" />
+    <script src="cms/admin/js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
-      <%--Header--%>
-            <div id="header">
-                <div class="container">
-                    <div class="logo">
-                       
-                        <a href="/Admin.aspx"> Logo</a>
-                    </div>
-                    <div class="accountMenu">
-                        Xin chào
-                    </div>                 
-                </div>               
+        <%--Header--%>
+        <div id="header">
+            <div class="container">
+                <div class="logo">
+                    <a href="/Admin.aspx">
+                        <img src="pic/Logo/logo-sach(1).jpg" />
+                    </a>
+                </div>
+                <div class="accountMenu">
+                    Xin chào:<asp:Literal ID="ltrTenDangNhap" runat="server"></asp:Literal> !
+                    <asp:LinkButton ID="lbtDangXuat" runat="server" OnClick="lbtDangXuat_Click">Đăng Xuất</asp:LinkButton>
+                </div>
             </div>
+        </div>
 
-         <%--Menu--%>
-            <div class="MenuChinh">
-                <div class="container">
-                    <ul>
-                <li><a href="Admin.aspx" title="Trang chủ">Trang chủ</a></li>
-                <li><a href="Admin.aspx?modul=SanPham" title="Sản Phẩm">Sản Phẩm</a></li>
-                <li><a href="Admin.aspx?modul=TaiKhoan" title="Tài Khoản">Tài Khoản</a></li>
-                <li><a href="Admin.aspx?modul=KhachHang" title="Khách Hàng">Khách Hàng</a></li>
-                 </ul>
+        <%--Menu--%>
+        <div class="MenuChinh">
+            <div class="container">
+                <ul>
+                   
+                    <li><a class="<%=DanhDau("SanPham") %>" href="Admin.aspx?modul=SanPham">Sản phẩm</a></li>
+                    <li><a class="<%=DanhDau("KhachHang") %>" href="Admin.aspx?modul=KhachHang">Khách Hàng</a></li>
+                    <li><a class="<%=DanhDau("TaiKhoan") %>" href="Admin.aspx?modul=TaiKhoan">Tài khoản</a></li>
+
+                </ul>
             </div>
-        </div>     
-         <%--Phần nội dung trang--%>
+        </div>
+        <%--Phần nội dung trang--%>
         <uc1:AdminLoadControl runat="server" ID="AdminLoadControl" />
 
- 
+
     </form>
 </body>
 </html>

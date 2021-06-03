@@ -13,7 +13,7 @@ a:hover{color:#f75d75}
 /*Phần header*/
 #header{height:80px;overflow:hidden}
 #header .logo{float:left;line-height:80px}
-#header .logo img{padding-top:15px}
+#header .logo img{height:80px}
 #header .accountMenu{float:right;line-height:80px}
 
 .MenuChinh{background:#f75d75}
@@ -54,7 +54,7 @@ a:hover{color:#f75d75}
 .FormThemMoi .thongBaoTaoThanhCong{color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold}
 .FormThemMoi .anhDaiDien{max-width:200px;max-height:120px;}
 
-/*CSS trang hiển thị các danh mục sản phẩm, danh mục tin tức*/
+/*CSS trang hiển thị các danh mục sản phẩm, danh sách sản phẩm*/
 .KhungChuaBang{padding:10px}
 table.tbDanhMuc{width:100%;border-collapse:collapse;border:1px solid #dfdfdf}
 table.tbDanhMuc th,
@@ -62,7 +62,6 @@ table.tbDanhMuc td{padding:5px;border:1px solid #dfdfdf}
 table.tbDanhMuc .cotMa{width:40px;text-align:center}
 table.tbDanhMuc .cotAnh{width:120px;text-align:center}
 table.tbDanhMuc .cotDonGia{width:120px;text-align:center}
-table.tbDanhMuc .cotNgayTao{width:150px}
 table.tbDanhMuc .cotSoLuong{width:120px;text-align:center}
 table.tbDanhMuc .cotThuTu{width:70px;text-align:center}
 table.tbDanhMuc .cotTenDK{width:120px;text-align:center}
@@ -91,5 +90,22 @@ table.tbKhachHang .cotThuTu{width:70px;text-align:center}
 table.tbKhachHang .cotTen{width:70px;text-align:center}
 table.tbKhachHang .cotEmail{width:120px;text-align:right}
 
-
-
+/* CSS trang hiển thị nhóm sản phẩm*/
+table.tbNhomSanPham{width:100%;border-collapse:collapse;border:1px solid #dfdfdf}
+table.tbNhomSanPham th,
+table.tbNhomSanPham td{padding:5px;border:1px solid #dfdfdf}
+table.tbNhomSanPham .cotMa{width:40px;text-align:center}
+table.tbNhomSanPham .cotAnh{width:120px;text-align:center}
+table.tbNhomSanPham .cotThuTu{width:70px;text-align:center}
+table.tbNhomSanPham .cotSoSanPhamHienThi{width:70px;text-align:center}
+table.tbNhomSanPham .cotCongCu{width:120px;text-align:right}
+table.tbNhomSanPham .cotCongCu a{display:inline-block;width:24px;height:24px;background-position:center;background-repeat:no-repeat}
+table.tbNhomSanPham .cotCongCu a.dmcon{background-image:url(expend.jpg) }
+table.tbNhomSanPham .cotCongCu a.sua{background-image:url(edit.jpg) }
+table.tbNhomSanPham .cotCongCu a.xoa{background-image:url(delete.jpg) }
+table.tbNhomSanPham .cotCongCu a.xem{background-image:url(view.png) }
+table.tbNhomSanPham .cotAnh{position:relative;z-index:1}
+table.tbNhomSanPham .cotAnh .anhDaiDien{max-width:40px;max-height:40px}
+table.tbNhomSanPham .cotAnh .anhDaiDienHover{max-width:200px;max-height:200px;display:none;position:absolute;z-index:1;top:0;right:80px}
+table.tbNhomSanPham .cotAnh:hover .anhDaiDienHover{display:inline-block}
+.cotPhai .head .btThemMoi{display:inline-block;background:url(add.jpg) no-repeat top left;padding-left:25px;padding-bottom:5px;padding-top:5px;color:#0026ff}

@@ -16,10 +16,13 @@ public partial class cms_admin_SanPham_SanPhamLoadControl : System.Web.UI.UserCo
             case "DanhSachSanPham":
                 plSanPhamLoadControl.Controls.Add(LoadControl("QuanLySanPham/SanPhamLoadControl.ascx"));
                 break;
-
+            case "NhomSanPham":
+                plSanPhamLoadControl.Controls.Add(LoadControl("QuanLyNhomSanPham/NhomLoadControl.ascx"));
+                break;
             case "DonHang":
                 plSanPhamLoadControl.Controls.Add(LoadControl("QuanLyDonHang/DonHangLoadControl.ascx"));
                 break;
+           
 
             default:
                  plSanPhamLoadControl.Controls.Add(LoadControl("QuanLySanPham/SanPhamLoadControl.ascx"));

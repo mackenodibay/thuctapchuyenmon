@@ -22,6 +22,7 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
         {
 
             LayDanhMucCha();
+            LayNhom();
             HienThiThongTin(id);
         }
 
@@ -29,7 +30,7 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
 
     private void HienThiThongTin(string id)
     {
-        if(thaotac=="ChinhSua")
+        if (thaotac == "ChinhSua")
         {
             btThemMoi.Text = "Chỉnh Sửa";
             cbThemNhieuDanhMuc.Visible = false;
@@ -42,7 +43,8 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
                 tbTenSanPham.Text = dt.Rows[0]["TenSP"].ToString();
                 tbSoLuong.Text = dt.Rows[0]["SoLuongSP"].ToString();
                 tbGiaBan.Text = dt.Rows[0]["GiaSP"].ToString();
-               
+
+                ddlNhom.SelectedValue = dt.Rows[0]["NhomID"].ToString();
 
                 tbMoTa.Text = dt.Rows[0]["MotaSP"].ToString();
 
@@ -55,16 +57,33 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
         {
             btThemMoi.Text = "Thêm Mới";
             cbThemNhieuDanhMuc.Visible = true;
+     
         }
 
     }
+    #region Lấy nhóm
+    
+
+    private void LayNhom()
+    {
+        DataTable dt = new DataTable();
+        dt = Webbanhang.NhomSanPham.Thongtin_Nhomsp();
+        ddlNhom.Items.Clear();
+
+        for (int i = 0; i < dt.Rows.Count; i++)
+        {
+            ddlNhom.Items.Add(new ListItem(dt.Rows[i]["TenNhom"].ToString(), dt.Rows[i]["NhomID"].ToString()));
+           // dt.Rows[i]["AnhDaiDien"].ToString(); dt.Rows[i]["ThuTu"].ToString(); dt.Rows[i]["SoSPHienThi"].ToString()
+        }
+    }
+    #endregion
     #region Lấy ra thông tin danh mục
     private void LayDanhMucCha()
     {
         DataTable dt = new DataTable();
         dt = Webbanhang.DanhMuc.Thongtin_Danhmuc_by_MaDMCha("0");
         ddlDanhMucCha.Items.Clear();
-        for(int i = 0 ; i<dt.Rows.Count ; i++)
+        for (int i = 0; i < dt.Rows.Count; i++)
         {
             ddlDanhMucCha.Items.Add(new ListItem(dt.Rows[i]["TenDM"].ToString(), dt.Rows[i]["MaDM"].ToString()));
             LayDanhMucCon(dt.Rows[i]["MaDM"].ToString(), "___");
@@ -99,7 +118,7 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
             //else ltrThongBao.Text = "Nhập sai hoặc thiếu thông tin! Mời nhập lại";
 
 
-            Webbanhang.SanPham.Sanpham_Inser(tbTenSanPham.Text, flAnhDaiDien.FileName, tbSoLuong.Text, tbGiaBan.Text, tbMoTa.Text, ddlDanhMucCha.SelectedValue,"");
+            Webbanhang.SanPham.Sanpham_Inser(tbTenSanPham.Text, flAnhDaiDien.FileName, tbSoLuong.Text, tbGiaBan.Text, tbMoTa.Text, ddlDanhMucCha.SelectedValue, ddlNhom.SelectedValue, "");
             ltrThongBao.Text = "<div class='thongBaoTaoThanhCong' style='color:#ff006e;font-size:16px;padding-bottom:20px;text-align:center;font-weight:bold'>Đã tạo sản phẩm: " + tbTenSanPham.Text + "</div>";
 
             if (cbThemNhieuDanhMuc.Checked)
@@ -132,17 +151,16 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
                 }
             }
 
-            if(tenAnhDaiDien == "")
+            if (tenAnhDaiDien == "")
             {
                 tenAnhDaiDien = hdTenAnhDaiDienCu.Value;
             }
 
-            Webbanhang.SanPham.Sanpham_Update(id,tbTenSanPham.Text, tenAnhDaiDien, tbSoLuong.Text, tbGiaBan.Text, tbMoTa.Text,
-            ddlDanhMucCha.SelectedValue);
+            Webbanhang.SanPham.Sanpham_Update(id, tbTenSanPham.Text, tenAnhDaiDien, tbSoLuong.Text, tbGiaBan.Text, tbMoTa.Text,ddlDanhMucCha.SelectedValue, ddlNhom.SelectedValue);
 
-             //đẩy trang về trang danh sách các damnh mục đã tạo
+            //đẩy trang về trang danh sách các damnh mục đã tạo
             Response.Redirect("Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham");
-            
+
             #endregion
         }
     }
@@ -158,5 +176,4 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi : System.We
     {
         ResetControl();
     }
-
 }

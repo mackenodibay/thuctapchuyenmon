@@ -1,7 +1,7 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SanPhamLoadControl.ascx.cs"
     Inherits="cms_admin_SanPham_SanPhamLoadControl" %>
 <div class="container">
-    <div style="clear:both;height:20px"></div>
+    <div style="clear: both; height: 20px"></div>
     <div class="cotTrai">
         <div class="head">
             Quản lý
@@ -9,6 +9,7 @@
         <ul>
             <li><a class="<%=DanhDau("SanPham","DanhMuc","") %>" href="Admin.aspx?modul=SanPham&modulphu=DanhMuc">Danh mục sản phẩm</a></li>
             <li><a class="<%=DanhDau("SanPham","DanhSachSanPham","") %>" href="Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham">Danh sách sản phẩm</a></li>
+            <li><a class="<%=DanhDau("SanPham","NhomSanPham","") %>" href="Admin.aspx?modul=SanPham&modulphu=NhomSanPham">Nhóm Sản Phẩm</a></li>
             <li><a class="<%=DanhDau("SanPham","DonHang","") %>" href="Admin.aspx?modul=SanPham&modulphu=DonHang">Đơn hàng</a></li>
         </ul>
         <div class="head">
@@ -16,6 +17,7 @@
         </div>
         <ul>
             <li><a class="<%=DanhDau("SanPham","DanhMuc","ThemMoi") %>" href="Admin.aspx?modul=SanPham&modulphu=DanhMuc&thaotac=ThemMoi">Danh mục sản phẩm</a></li>
+            <li><a class="<%=DanhDau("SanPham","NhomSanPham","ThemMoi") %>" href="Admin.aspx?modul=SanPham&modulphu=NhomSanPham&thaotac=ThemMoi">Nhóm Sản Phẩm</a></li>
             <li><a class="<%=DanhDau("SanPham","DanhSachSanPham","ThemMoi") %>" href="Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham&thaotac=ThemMoi">Danh sách sản phẩm</a></li>
         </ul>
     </div>

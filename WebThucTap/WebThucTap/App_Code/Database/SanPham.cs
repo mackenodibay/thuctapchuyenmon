@@ -12,22 +12,22 @@ namespace Webbanhang
     /// </summary>
     public class SanPham
     {
-#region Phương thức xóa sản phẩm theo mã sản phẩm truyền vào
-		 /// <summary>
+        #region Phương thức xóa sản phẩm theo mã sản phẩm truyền vào
+        /// <summary>
         /// Phương thức xóa sản phẩm theo mã sản phẩm truyền vào
         /// </summary>
         /// <param name="masp">mã sản phẩm cần xóa</param>
         public static void Sanpham_Delete(string masp)
         {
             OleDbCommand cmd = new OleDbCommand("sanpham_delete");
-            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@masp", masp);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-#endregion
-        
-#region Phương thức thêm mới sản phẩm vào bảng sản phẩm
-		 /// <summary>
+        #endregion
+
+        #region Phương thức thêm mới sản phẩm vào bảng sản phẩm
+        /// <summary>
         /// Phương thức thêm mới sản phẩm vào bảng sản phẩm
         /// </summary>
         /// <param name="tensp"></param>
@@ -36,24 +36,25 @@ namespace Webbanhang
         /// <param name="giasp"></param>
         /// <param name="motasp"></param>
         /// <param name="maDM"></param>
+        /// <param name="nhomID"></param>
         /// <param name="ret"></param>
-        public static void Sanpham_Inser(string tensp,string anhsanpham,string soluongsp,string giasp,string motasp,string maDM,string ret)
+        public static void Sanpham_Inser(string tensp, string anhsanpham, string soluongsp, string giasp, string motasp, string maDM, string nhomID, string ret)
         {
             OleDbCommand cmd = new OleDbCommand("sanpham_insert");
-            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@tensp", tensp);
             cmd.Parameters.AddWithValue("@anhsanpham", anhsanpham);
-
             cmd.Parameters.AddWithValue("@soluongsp", soluongsp);
             cmd.Parameters.AddWithValue("@giasp", giasp);
             cmd.Parameters.AddWithValue("@motasp", motasp);
             cmd.Parameters.AddWithValue("@maDM", maDM);
+            cmd.Parameters.AddWithValue("@nhomID", nhomID);
             cmd.Parameters.AddWithValue("@ret", ret);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
-#endregion
-        
-#region  Phương thức chỉnh sửa thông tin một sản phẩm
+        #endregion
+
+        #region  Phương thức chỉnh sửa thông tin một sản phẩm
         /// <summary>
         /// Phương thức chỉnh sửa thông tin một sản phẩm
         /// </summary>
@@ -64,10 +65,11 @@ namespace Webbanhang
         /// <param name="giasp"></param>
         /// <param name="motasp"></param>
         /// <param name="madm"></param>
-        public static void Sanpham_Update(string masp,string tensp,string anhsp,string soluongsp,string giasp,string motasp,string madm)
+        /// <param name="nhomid"></param>
+        public static void Sanpham_Update(string masp, string tensp, string anhsp, string soluongsp, string giasp, string motasp, string madm, string nhomid)
         {
             OleDbCommand cmd = new OleDbCommand("sanpham_update");
-            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@masp", masp);
             cmd.Parameters.AddWithValue("@tensp", tensp);
             cmd.Parameters.AddWithValue("@anhsp", anhsp);
@@ -75,42 +77,52 @@ namespace Webbanhang
             cmd.Parameters.AddWithValue("@giasp", giasp);
             cmd.Parameters.AddWithValue("@motasp", motasp);
             cmd.Parameters.AddWithValue("@madm", madm);
+            cmd.Parameters.AddWithValue("@nhomid", nhomid);
             SQLDatabase.ExecuteNoneQuery(cmd);
         }
 
 
-	#endregion        
-       
-#region Phương thức lấy ra danh sách tất cả sản phẩm
-		/// <summary>
+        #endregion
+
+        #region Phương thức lấy ra danh sách tất cả sản phẩm
+        /// <summary>
         /// Phương thức lấy ra danh sách tất cả sản phẩm
         /// </summary>
         /// <returns></returns>
-         public static DataTable Thongtin_Sanpham()
+        public static DataTable Thongtin_Sanpham()
         {
             OleDbCommand cmd = new OleDbCommand("thongtin_sanpham");
-            cmd.CommandType=CommandType.StoredProcedure;
+            cmd.CommandType = CommandType.StoredProcedure;
             return SQLDatabase.GetData(cmd);
-        } 
-#endregion
+        }
+        #endregion
 
-         #region Phương thức lấy ra thông tin sản phẩm theo id sản phẩm
-         /// <summary>
-         /// Phương thức lấy ra thông tin size theo id size
-         /// <para name="MaSP">Mã của sản phẩm cần lấy thông tin</para>
-         /// </summary>
-         /// <returns></returns>
-         public static DataTable Thongtin_Sanpham_by_id(string MaSP)
-         {
-             OleDbCommand cmd = new OleDbCommand("thongtin_sanpham_by_id");
-             cmd.CommandType = CommandType.StoredProcedure;
-             cmd.Parameters.AddWithValue("@MaSP", MaSP);
-             return SQLDatabase.GetData(cmd);
-         }
+        #region Phương thức lấy ra thông tin sản phẩm theo id sản phẩm
+        /// <summary>
+        /// Phương thức lấy ra thông tin size theo id size
+        /// <para name="MaSP">Mã của sản phẩm cần lấy thông tin</para>
+        /// </summary>
+        /// <returns></returns>
+        public static DataTable Thongtin_Sanpham_by_id(string MaSP)
+        {
+            OleDbCommand cmd = new OleDbCommand("thongtin_sanpham_by_id");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@MaSP", MaSP);
+            return SQLDatabase.GetData(cmd);
+        }
         #endregion
 
 
-   
+        #region Lấy danh sách sản phẩm theo nhóm id
+        public static DataTable Thongtin_Sanpham_by_nhomid(string NhomID, string SoSPHienThi)
+        {
+            OleDbCommand cmd = new OleDbCommand("thongtin_sanpham_by_nhomid");
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@NhomID", NhomID);
+            cmd.Parameters.AddWithValue("@SoSPHienThi", SoSPHienThi);
+            return SQLDatabase.GetData(cmd);
+        }
+        #endregion
 
         #region Lấy danh sách sản phẩm theo mã danh mục - chỉ 3 sản phẩm đầu
         public static DataTable Thongtin_Sanpham_by_madm(string MaDM)

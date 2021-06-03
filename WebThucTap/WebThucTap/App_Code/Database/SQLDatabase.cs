@@ -50,7 +50,7 @@ namespace Webbanhang
             {
                 OleDbConnection conn = GetConnection();
                 cmd.Connection = conn;
-                cmd.ExecuteNonQuery();
+                cmd.ExecuteNonQuery();  
             }
         }
 

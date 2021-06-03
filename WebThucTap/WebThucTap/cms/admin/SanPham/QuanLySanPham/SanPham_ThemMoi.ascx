@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="SanPham_ThemMoi.ascx.cs" Inherits="cms_admin_SanPham_QuanLySanPham_SanPham_ThemMoi" %>
 <div class="head">
-    Thêm mới, chỉnh sửa sản phẩm 
+    Thêm mới, chỉnh sửa sản phẩm
 </div>
 <div class="FormThemMoi">
     <asp:Literal ID="ltrThongBao" runat="server"></asp:Literal>
@@ -39,12 +39,15 @@
             <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Giá bán phải nhập kiểu số" ControlToValidate="tbGiaBan" Display="Dynamic" SetFocusOnError="True" ValidationExpression="(\d)*" ForeColor="Red"  ></asp:RegularExpressionValidator>
         </div>
     </div>
-
+    <div class="thongTin">
+        <div class="tenTruong">Chọn nhóm sản phẩm</div>
+        <div class="oNhap"><asp:DropDownList ID="ddlNhom" runat="server"></asp:DropDownList></div>
+    </div>
     <div class="thongTin">
         <div class="tenTruong">Mô tả sản phẩm</div>
         <div class="oNhap">            
-            <asp:TextBox ID="tbMoTa" TextMode="MultiLine" runat="server" Height="150px"></asp:TextBox>
-
+           <asp:TextBox ID="tbMoTa" TextMode="MultiLine" runat="server" Height="150px"></asp:TextBox>
+            
         </div>
     </div>
     <div class="thongTin">

@@ -30,7 +30,6 @@ public partial class cms_admin_SanPham_QuanLySanPham_SanPham_HienThi : System.We
                </td>
                <td class='cotSoLuong'>" + dt.Rows[i]["SoLuongSP"] + @"</td>
                <td class='cotDonGia'>" + dt.Rows[i]["GiaSP"] + @"</td>
-               <td class='cotNgayTao'>" + dt.Rows[i]["NgayTao"] + @"</td>
                <td class='cotCongCu'>
                    <a href='Admin.aspx?modul=SanPham&modulphu=DanhSachSanPham&thaotac=ChinhSua&id=" + dt.Rows[i]["MaSP"] + @"' class='sua' title='Sửa'></a>
                    <a href='javascript:XoaSanPham(" + dt.Rows[i]["MaSP"] + @")' class='xoa' title='Xóa'></a>
