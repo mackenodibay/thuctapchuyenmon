@@ -38,12 +38,13 @@ namespace Webbanhang
         /// <param name="maDM"></param>
         /// <param name="nhomID"></param>
         /// <param name="ret"></param>
-        public static void Sanpham_Inser(string tensp, string anhsanpham, string soluongsp, string giasp, string motasp, string maDM, string nhomID, string ret)
+        public static void Sanpham_Inser(string tensp, string anhsanpham, string soluongsp, string giasp, string motasp,  string maDM, string nhomID, string ret)
         {
             OleDbCommand cmd = new OleDbCommand("sanpham_insert");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@tensp", tensp);
             cmd.Parameters.AddWithValue("@anhsanpham", anhsanpham);
+
             cmd.Parameters.AddWithValue("@soluongsp", soluongsp);
             cmd.Parameters.AddWithValue("@giasp", giasp);
             cmd.Parameters.AddWithValue("@motasp", motasp);
@@ -66,16 +67,18 @@ namespace Webbanhang
         /// <param name="motasp"></param>
         /// <param name="madm"></param>
         /// <param name="nhomid"></param>
-        public static void Sanpham_Update(string masp, string tensp, string anhsp, string soluongsp, string giasp, string motasp, string madm, string nhomid)
+        public static void Sanpham_Update(string masp, string tensp, string anhsp, string soluongsp, string giasp, string motasp,  string madm, string nhomid)
         {
             OleDbCommand cmd = new OleDbCommand("sanpham_update");
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@masp", masp);
             cmd.Parameters.AddWithValue("@tensp", tensp);
             cmd.Parameters.AddWithValue("@anhsp", anhsp);
+
             cmd.Parameters.AddWithValue("@soluongsp", soluongsp);
             cmd.Parameters.AddWithValue("@giasp", giasp);
             cmd.Parameters.AddWithValue("@motasp", motasp);
+
             cmd.Parameters.AddWithValue("@madm", madm);
             cmd.Parameters.AddWithValue("@nhomid", nhomid);
             SQLDatabase.ExecuteNoneQuery(cmd);

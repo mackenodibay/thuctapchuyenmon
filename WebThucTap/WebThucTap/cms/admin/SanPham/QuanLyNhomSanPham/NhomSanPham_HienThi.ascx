@@ -13,7 +13,7 @@
            <th class="cotThuTu">Thứ tự</th>
            <th class="cotSoSanPhamHienThi">Số sản phẩm hiển thị</th>
            <th class="cotCongCu">Công cụ</th>
-       </tr>
+       </tr>    
        <asp:Literal ID="ltrNhomSanPham" runat="server"></asp:Literal>
    </table>
 </div>

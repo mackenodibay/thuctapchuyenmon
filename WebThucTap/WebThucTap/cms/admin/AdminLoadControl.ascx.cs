@@ -25,7 +25,6 @@ public partial class cms_admin_AdminLoadControl : System.Web.UI.UserControl
             case "KhachHang":
                 plAdminLoadControl.Controls.Add(LoadControl("KhachHang/KhachHangLoadControl.ascx"));
                 break;
-
             default:
                 plAdminLoadControl.Controls.Add(LoadControl("SanPham/SanPhamLoadControl.ascx"));
                 break;
