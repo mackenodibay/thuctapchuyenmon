@@ -10,6 +10,6 @@ Xem danh sách sản phẩm theo nhóm sản phẩm,danh mục
 Đăng ký , đăng nhập Tài khoản khách hàng để lưu trữ thông tin khách hàng
 Tính năng giỏ hàng , cập nhập giá theo số lượng , xóa sản phẩm trong giỏ hàng 
 Tính chọn hình thức thanh toán 
-Tính năng thanh toán trực truyến bằng thẻ test rồi gửi kết quả thanh toán lên trang quản trị phần quẩn lý đơn hàng
+Tính năng thanh toán trực truyến bằng thẻ test rồi gửi kết quả thanh toán lên trang quản trị phần quản lý đơn hàng
 
 
