@@ -1,4 +1,9 @@
-﻿body{background:url(images/nenbody.gif) repeat;margin:0;padding:0}
+﻿body {
+    background;
+    background-image: url('images/nenbody.jpg');
+    margin: 0;
+    padding: 0
+}
 .cb{clear:both}
 .contener{height:100%;margin:auto;width:1000px}
 

@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="GioHang.ascx.cs" Inherits="cms_display_SanPham_GioHang" %>
-<link href="../../../css/gio-hang.css" rel="stylesheet" />
+<link href="css/gio-hang.css" rel="stylesheet" />
 <div class="modal-content">
     <div class="modal-header">
         <h4 class="modal-title" id="exampleModalLabel">Bạn có <span class="TongSoSPTrongGioHang">0</span> sản phẩm trong giỏ hàng.</h4>
@@ -11,7 +11,7 @@
     </div>
     <div>
         <div class="modal-body" id="BangThongTinGioHang">
-           
+          
         </div>
         <div class="modal-footer">
             <div class="dienThongTinDatHang">
@@ -24,7 +24,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbHoTen" type="text" <%--value="<%=hoTen %>"--%>/>
+                            <input id="tbHoTen" type="text" value="<%=hoTen %>"/>
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbDiaChi" type="text" <%--value="<%=diaChi %>"--%>/>
+                            <input id="tbDiaChi" type="text" value="<%=diaChi %>"/>
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -52,7 +52,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbSoDienThoai" type="text" <%--value="<%=soDienThoai %>"--%>/>
+                            <input id="tbSoDienThoai" type="text" value="<%=soDienThoai %>"/>
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -66,7 +66,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="modal-note">
-                            <input id="tbEmail" type="text" <%--value="<%=email %>"--%>/>
+                            <input id="tbEmail" type="text" value="<%=email %>"/>
                         </div>
                     </div>
                     <div class="cb"></div>
@@ -79,7 +79,58 @@
                 </div>
             </div>
             
-      
+            <div class="CacHinhThucThanhToan">
+                <div class="goiY">
+                    Quý khách vui lòng chọn một trong các hình thức thanh toán dưới đây để thanh toán cho đơn hàng của mình
+                </div>
+                <div>                    
+                    <input id="rbChuyenKhoan" type="radio" name="rbHinhThucThanhToan"/><label for="rbChuyenKhoan">Thanh toán chuyển khoản</label>
+                    <div class="paymentInfo">
+                        Tên tài khoản: Công ty cổ phần dịch vụ Tất Thành<br/>
+                        Số tài khoản: 1305201005711<br/>
+                        Ngân hàng nông nghiệp và phát triển nông thôn Việt Nam - Chi nhánh Tràng An
+                    </div>
+                </div><br/>
+                <div>                    
+                    <input id="rbOnepay" type="radio" name="rbHinhThucThanhToan" checked="checked"/><label for="rbOnepay">Thanh toán trực tuyến qua thẻ ATM</label>
+                    <div class="paymentInfo">       
+                        <script type="text/javascript"src="http://202.9.84.88/documents/payment/logoscript.jsp?logos=at&lang=vi"></script> 
+                        <div class="cb"><!----></div>
+                    </div>                                      
+                </div><br/>
+                <div>
+                    <input id="rbOnepayQuocTe" type="radio" name="rbHinhThucThanhToan"/><label for="rbOnepayQuocTe">Thanh toán trực tuyến qua thẻ Visa, Master, American Express,...</label>
+                    <div class="paymentInfo">       
+                        <script type="text/javascript"src="http://202.9.84.88/documents/payment/logoscript.jsp?logos=v,m,a,j,u&lang=en"></script> 
+                        <div class="cb"><!----></div>
+                    </div>
+                </div><br/>
+            </div>
+            <div class="thongTinTheTest">
+                <div>
+                    Lưu ý: đây là bản website đang demo tính năng tích hợp thanh toán nên bạn có thể dùng thông tin test phía dưới để thử thanh toán
+                </div>
+                <div>
+                    <b>Thẻ ATM ABB để test</b><br/>
+                    Tên: NGUYEN VAN A<br/>
+                    Số thẻ: 9704250000000001<br/>
+                    Tháng/Năm phát hành: 01/13<br/>
+                    Mã OTP: 123456<br/>
+                </div><br/>
+                <div>
+                    <b>Thẻ Visa để test</b><br/>
+                    Thông tin thẻ test:<br/>
+                    Loại tài khoản: Visa<br/>
+                    Số thẻ: 4000000000000002 or 5313581000123430<br/>
+                    Date Exp: 05/21<br/>
+                    CVV/CSC: 123<br/>
+                    Street: Tran Quang Khai<br/>
+                    City/Town: Hanoi<br/>
+                    State/Province: North<br/> 
+                    Postcode(zip code): 1234<br/>
+                    Country: VietNam
+                </div>
+            </div>
 
             <div class="row" style="margin-top:10px;">
                 <div class="col-lg-6">
@@ -196,5 +247,40 @@
 
 
     
+    //Hàm gửi đơn hàng
+    function GuiDonHang() {
+        //Kiểm tra xem khách hàng đã nhập đủ họ tên và số điện thoại chưa
+        if ($("#tbHoTen").val() !== "" && $("#tbSoDienThoai").val() !== "") {
 
+            var phuongthucthanhtoan = "";
+            if ($("#rbThanhToanSau").is(":checked")) phuongthucthanhtoan = "ThanhToanSau";
+            if ($("#rbOnepay").is(":checked")) phuongthucthanhtoan = "Onepay";
+            if ($("#rbOnepayQuocTe").is(":checked")) phuongthucthanhtoan = "OnepayQuocTe";
+
+            $.post("cms/display/SanPham/Ajax/XuLyGioHang.aspx",
+                   {
+                       "ThaoTac": "GuiDonHang",
+                       "hoTen": $("#tbHoTen").val(),
+                       "diaChi": $("#tbDiaChi").val(),
+                       "soDienThoai": $("#tbSoDienThoai").val(),
+                       "email": $("#tbEmail").val(),
+                       "phuongThucThanhToan": phuongthucthanhtoan
+                   },
+                   function (data, status) {
+                       //alert("Data :" + data + "\n Status :" + status);
+
+                       //Nếu không có lỗi (tức là xóa thành công) --> thông báo đặt hàng thành công --> đẩy về trang chủ
+                       if (phuongthucthanhtoan === "ThanhToanSau") {
+                           if (data === "") {
+                               alert("Bạn đã gửi đơn hàng thành công");
+                               location.href = "/";
+                           }
+                       } else {//Trường hợp thanh toán online --> đẩy tới trang thanh toán của đơn vị tích hợp
+                           location.href = data;
+                       }
+                   });
+        } else {
+            alert("Vui lòng nhập đầy đủ Họ tên và Số điện thoại để đặt hàng");
+        }
+    }
 </script>
