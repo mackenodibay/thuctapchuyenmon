@@ -1,15 +1,34 @@
 # thuctapchuyenmon
-Các chức năng đã làm được :
----Trang Quản Trị---
-Thêm, sửa ,xóa danh muc,sản phẩm,nhóm sản
-Tạo,sửa,xóa tài khoản trang quản trị
-Bắt lỗi đăng nhập,Phải đăng nhập đúng tài khoản mật khẩu mới truy cập vào được trang admin
+Nguyễn Thanh Sang / MSV:5951071090
 
----Trang Giao Diện----
-Xem danh sách sản phẩm theo nhóm sản phẩm,danh mục
-Đăng ký , đăng nhập Tài khoản khách hàng để lưu trữ thông tin khách hàng
-Tính năng giỏ hàng , cập nhập giá theo số lượng , xóa sản phẩm trong giỏ hàng 
-Tính chọn hình thức thanh toán 
-Tính năng thanh toán trực truyến bằng thẻ test rồi gửi kết quả thanh toán lên trang quản trị phần quản lý đơn hàng
+Đề tài: Web Bán Sách - ASP.Net 
+
+Giảng viên: Nguyên Lê Minh.
+
+Phần 1: Công nghệ sử dụng
+
+Visual Studio 2017
+ASP.NET Webform
+Microsoft SQL Server
+Phần 2: Trang Quản trị:
+
+Xây dựng cơ sở dữ liệu cho web bán sách.(hoàn thành)
+Mô hình 3 layers.(hoàn thành)
+Chức năng đăng nhập Admin(hoàn thành)
+Tài khoản admin(hoàn thành)
+Xem đơn hàng đã đặt (hoàn thành)
+Chức năng đăng nhập khách hàng.(hoàn thành)
+Hiển thị, thêm, xóa , sửa sản phẩm.(hoàn thành)
+Hiển thị , thêm ,xóa, sửa, nhóm sản phẩm.(hoàn thành)
+Hiển thị , thêm ,xóa, sửa, danh mục sản phẩm.(hoàn thành)
+Phần 3: Trang giao diện người dùng.
+Tìm kiếm theo tên sản phẩm.(chưa hoàn thành)
+Xem chi tiết sản phẩm.(hoàn thành)
+Chức năng giỏ hàng.(hoàn thành)
+Chúc năng mua hàng.(hoàn thành)
+Hiển thị tổng tiền.(hoàn thành)
+Hiện thị hình thức thanh toán (hoàn thành)
+Chức Năng thanh toán trực tuyến qua one pay (hoàn thành)
+
 
 
