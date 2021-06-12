@@ -24,6 +24,9 @@ public partial class cms_display_SanPham_SanPhamLoadControl : System.Web.UI.User
             case "GioHang":
                 plLoadControl.Controls.Add(LoadControl("GioHang.ascx"));
                 break;
+            case "TimKiem":
+                plLoadControl.Controls.Add(LoadControl("TimKiem.ascx"));
+                break;
             default:
                 plLoadControl.Controls.Add(LoadControl("TrangChuModulSanPham.ascx"));
                 break;

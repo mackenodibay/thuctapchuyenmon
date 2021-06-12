@@ -32,11 +32,7 @@
     color: #ff6517;
     margin-right: 25px;}
 .thongso{overflow: hidden;padding-top:10px}
-.size{font-size: 13px;
-    color:#303030;
-    font-weight: bold;
-    display: block;margin-top:10px}
-.size label{padding-right: 10px;}
+
 .select-site{width: 50px;
     height: 25px}
 .soluong {font-size: 13px;
@@ -46,19 +42,8 @@
 .soluong label{padding-right: 20px;}
 #quantity{width: 47px;
     height: 20px}
-.mausac{font-size: 13px;
-    color:#303030;
-    font-weight: bold;
-    display: block;margin-top:15px}
-.mausac .select-site{width: 70px;
-    height: 25px}
-.mausac label{padding-right: 27px;}
-.chatlieu{font-size: 13px;
-    color:#303030;
-    font-weight: bold;
-    display: block;margin-top:15px}
-.chatlieu label{padding-right: 23px;}
-.chatlieu span{color:#ec2917}
+
+
 
 .row{overflow: hidden;padding-top:30px}
 .giohangsp{width:45%;float:left;padding-right: 31px;}
@@ -118,7 +103,7 @@
     background: url(../pic/anhsp/check.png) no-repeat center center;
 }
 
-.sanphamlienquan{overflow: hidden}
+
 #sanphamnoibat{overflow: hidden}
 .title-line{text-align: center;position: relative;display: block;margin-top:28px}
 .title-line > a{text-decoration:none}

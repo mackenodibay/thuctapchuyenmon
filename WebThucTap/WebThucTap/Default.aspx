@@ -86,7 +86,7 @@
     <!--thanh tìm kiếm + giỏ hàng-->
     <div id="timkiem">
         <div class="contener">
-            <div id="timkiem">
+           
                 <div class="timkiemtrai">
                         <div class="timkiemanh"></div>
                 </div>
@@ -124,7 +124,7 @@
                     </div>  
                 </div>
             </div>
-        </div>
+     
     </div>
 
     <!--thân trang-->

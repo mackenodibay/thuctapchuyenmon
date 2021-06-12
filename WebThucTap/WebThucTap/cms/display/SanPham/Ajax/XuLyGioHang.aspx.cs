@@ -199,7 +199,7 @@ public partial class cms_display_SanPham_Ajax_XuLyGioHang : System.Web.UI.Page
         if (dt.Rows.Count == 0)
         {
             //Thêm mới khách hàng với mật khẩu chính là email của khách hàng
-            string matKhau = Webbanhang.MaHoa.MaHoaMD5(email);
+            string matKhau = MaHoa.MaHoaMD5(email);
             KhachHang.Khachang_Inser(hoTen, diaChi, soDienThoai, email, matKhau, "");
 
             //Thực hiện lấy lại thông tin khách hàng vừa thêm và trả về mã khách hàng

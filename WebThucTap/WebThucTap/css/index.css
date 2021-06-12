@@ -14,7 +14,7 @@
 #logo{height:110px;padding-bottom:5px;padding-top:5px}
 #logochu{float:left;height:100px;padding-bottom:5px;padding-top:5px;width:235px}
 #logochu img{margin-top:25px;max-height:90px}
-#anh1{background:url(images/emdep.png) no-repeat center center;height:90px;padding-bottom:5px;padding-top:5px;width:225px}
+#anh1{height:90px;padding-bottom:5px;padding-top:5px;width:225px}
 #logoanh{float:left;height:100px;padding-bottom:5px;padding-left:30px;padding-top:5px;width:735px}
 #anh2{background:url(images/emdep1.png) no-repeat;height:90px;padding-bottom:5px;padding-top:5px;width:725px}
 
@@ -23,8 +23,8 @@
 #menudautrang .contener{padding:1px}
 #menutrai{float:left;height:40px;width:800px}
 .menungang{height:100%;margin:0px auto;padding:0px}
-.menu1{float:left;list-style:none;padding:10px 18px 0px 0px}
-.menungang li a{border-right:1px solid #ccc;color:white;font:bold 15px SFUEurostileCond;padding:9px 20px 10px 0px;text-decoration:none}
+.menu1{float:left;list-style:none;padding:10px 18px 0px 0px;}
+.menu1 li a{border-right:1px solid #ccc;color:white;font:bold 15px SFUEurostileCond;padding:9px 20px 10px 0px;text-decoration:none}
 #menutrai a:hover{color:black}
 #dangnhap{float:right;height:40px;width:200px}
 #dangnhap ul{margin:0px;padding:10px 0px}
@@ -85,17 +85,9 @@
 .nganhang img{margin:0px 0px 3px 15px}
 .nganhang p{margin:2px 0px 30px 15px}
 
-#thongketruycap{margin-top:15px;overflow:hidden;width:100%}
-.title-thongke{background:#f75d75;border-radius:7px 7px 0px 0px;height:35px;width:100%}
-.title-thongke>a{color:white;font:bold 15px SFUEurostileCond;line-height:35px;margin-left:53px}
-.so-thongke{background:#f9dde1;border:1px solid #808080;border-radius:0px 0px 7px 7px;overflow:hidden}
-.so-thongke p{margin:0px;margin:10px 0px 10px 15px}
+
 
 #trangphai{float:left;height:100%;padding-left:5px;width:710px}
-#slideshow{border:5px solid #f75d75;border-radius:5px;height:300px;position:relative;width:700px}
-#slideshow img{left:0;position:absolute;top:0;z-index:8}
-#slideshow img.active{z-index:10}
-#slideshow img.last-active{z-index:9}
 .sanphamnoibat{overflow:hidden}
 .title-line{display:block;margin-top:7px;position:relative;text-align:center}
 .title-line h3{background:url(images/nenbody.gif);color:#ff006e;display:inline-block;padding:0px 15px;position:relative;white-space:nowrap;z-index:1}
@@ -109,8 +101,6 @@
 
 
 .desc{color:#f75d75;font:normal 15px SFUEurostileCond;padding-bottom:5px}
-#sanphammoive{overflow:hidden}
-#sanphambanchay{overflow:hidden}
 
 /*chân trang*/
 #footer{background:url(images/bgfooter.jpg) no-repeat center center;height:170px;margin-top:50px}
