@@ -22,7 +22,7 @@ Hiển thị, thêm, xóa , sửa sản phẩm.(hoàn thành)
 Hiển thị , thêm ,xóa, sửa, nhóm sản phẩm.(hoàn thành)
 Hiển thị , thêm ,xóa, sửa, danh mục sản phẩm.(hoàn thành)
 Phần 3: Trang giao diện người dùng.
-Tìm kiếm theo tên sản phẩm.(chưa hoàn thành)
+Tìm kiếm theo tên sản phẩm.( hoàn thành)
 Xem chi tiết sản phẩm.(hoàn thành)
 Chức năng giỏ hàng.(hoàn thành)
 Chúc năng mua hàng.(hoàn thành)
