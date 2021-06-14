@@ -10,7 +10,7 @@ using System.Data.OleDb;
 public partial class cms_admin_TaiKhoan_TaiKhoan_ThemMoi : System.Web.UI.UserControl
 {
     private string thaotac = "";
-    private string id = "";//lấy id của danh mục cần chỉnh sửa
+    private string id = "";//lấy id của tài khoản cần chỉnh sửa
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["thaotac"] != null)

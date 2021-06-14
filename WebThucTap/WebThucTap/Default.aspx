@@ -20,7 +20,7 @@
             margin-left: 0px;
         }
         .auto-style4 {
-            width: 136px;
+            width: 150px;
             height: 69px;
         }
         .auto-style5 {
@@ -59,7 +59,7 @@
         <div class="contener">
             <div id="menutrai">
                 <ul class="auto-style6">
-                    <li class="menu1"><a href="Default.aspx">Trang Chủ</a></li>
+                    <li class="menu1" ><a href="Default.aspx" >Trang Chủ</a></li>
                     <li class="menu1"><a href="Default.aspx?modul=SanPham">Sản Phẩm</a></li>
 
                 </ul>
@@ -87,9 +87,6 @@
     <div id="timkiem">
         <div class="contener">
            
-                <div class="timkiemtrai">
-                        <div class="timkiemanh"></div>
-                </div>
                 <div class="timkiemphai">
                     <div class="giohang">
                         <a id="cart" style="display:inline-block" href="/Default.aspx?modul=SanPham&modulphu=GioHang"></a>
