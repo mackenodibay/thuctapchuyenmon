@@ -39,7 +39,7 @@
                     <td>Tên SP</td>
                     <td class="tar">Đơn giá</td>
                     <td class="tar">Số lượng</td>
-                    <td class="tar">Thành tiền</td>
+                    <td class="tar">Thành tiền</td> 
                 </tr>--%>
                 <tr>
                     <td colspan="5"><b>Tổng tiền</b></td>                    
@@ -49,10 +49,9 @@
         </div>
         <div class="thongTinCuoi">
             Mọi nhu cầu liên hệ của quý khách, vui lòng liên hệ với chúng tôi theo thông tin dưới đây.<br/>
-            Cửa hàng thời trang nữ Em đẹp<br/>
-            Địa chỉ: Nhà 18T2 Khu đô thị Trung Hòa - Nhân Chính, Thanh Xuân, Hà Nội<br/>
-            Số điện thoại: 0902 234 481<br/>
-            Email: emdepfashion@gmail.com<br/>
+            Thanh Sang - sdt:0384997837<br/>
+            Thanh Hằng - sdt:0369041794<br/>
+            Email: bookstore@gmail.com<br/>
             Rất hân hạnh được phục vụ quý khách!
         </div>
         <div style="position:fixed;z-index:1;bottom:10px;right:10px">Gợi ý: nhấn <b>Ctrl P</b> để in đơn hàng</div>
