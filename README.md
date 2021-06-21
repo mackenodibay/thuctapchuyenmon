@@ -3,7 +3,7 @@ Nguyễn Thanh Sang / MSV:5951071090
 
 Đề tài: Web Bán Sách - ASP.Net 
 
-Giảng viên: Nguyên Lê Minh.
+Giảng viên: Nguyễn Lê Minh.
 
 Phần 1: Công nghệ sử dụng
 
