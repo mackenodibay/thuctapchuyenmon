@@ -33,14 +33,6 @@
                     <th class="tar">Thành tiền</th>
                 </tr>
                 <asp:Literal ID="ltrDanhSachSanPham" runat="server"></asp:Literal>
-                <%--<tr>
-                    <td>STT</td>
-                    <td>Mã SP</td>
-                    <td>Tên SP</td>
-                    <td class="tar">Đơn giá</td>
-                    <td class="tar">Số lượng</td>
-                    <td class="tar">Thành tiền</td> 
-                </tr>--%>
                 <tr>
                     <td colspan="5"><b>Tổng tiền</b></td>                    
                     <td class="tar"><b><asp:Literal ID="ltrTongTienDonHang" runat="server"></asp:Literal></b></td>

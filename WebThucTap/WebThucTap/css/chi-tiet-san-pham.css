@@ -80,7 +80,7 @@
     top: 0;
 }
 .btn-color-add:after {
-    background:url(../pic/anhsp/cart.png) no-repeat center center;
+    background:url(../pic/cart.png) no-repeat center center;
 }
 .btn-detail:after {
     content: "";

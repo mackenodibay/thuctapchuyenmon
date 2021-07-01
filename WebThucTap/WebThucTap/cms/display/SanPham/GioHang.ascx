@@ -84,11 +84,10 @@
                     Quý khách vui lòng chọn một trong các hình thức thanh toán dưới đây để thanh toán cho đơn hàng của mình
                 </div>
                 <div>                    
-                    <input id="rbChuyenKhoan" type="radio" name="rbHinhThucThanhToan"/><label for="rbChuyenKhoan">Thanh toán chuyển khoản</label>
+                    <input id="rbChuyenKhoan" type="radio" name="rbHinhThucThanhToan"/><label for="rbChuyenKhoan">Thanh toán khi nhận hàng</label>
                     <div class="paymentInfo">
-                        Tên tài khoản: Công ty cổ phần dịch vụ Tất Thành<br/>
-                        Số tài khoản: 1305201005711<br/>
-                        Ngân hàng nông nghiệp và phát triển nông thôn Việt Nam - Chi nhánh Tràng An
+                        
+    
                     </div>
                 </div><br/>
                 <div>                    

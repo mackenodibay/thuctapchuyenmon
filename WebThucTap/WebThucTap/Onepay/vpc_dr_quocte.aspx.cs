@@ -87,7 +87,7 @@ public partial class onepay_vpc_dr_quocte : System.Web.UI.Page
             Response.Write("<div class='result'>Thanh toán không thành công</div>");
         }
 
-        //ScriptManager.RegisterStartupScript(this, this.GetType(), "", "Redirect('" + TatThanhJsc.Website.URL.WebisteUrl + "', 6);", true);
+    
 
         
     }

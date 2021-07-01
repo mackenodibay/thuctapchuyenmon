@@ -91,10 +91,6 @@
                     <div class="giohang">
                         <a id="cart" style="display:inline-block" href="/Default.aspx?modul=SanPham&modulphu=GioHang"></a>
                     </div>
-                    <div class="hotline">
-                        <div class="label">HOTLINE</div>
-                        <div class="number">0384997837 - 0369041794</div>
-                    </div>
                     <div class="otimkiem">
                         <div class="search">
                             <div id="searchForm">
@@ -194,6 +190,29 @@
                 <uc1:DisplayLoadControl runat="server" ID="DisplayLoadControl" />
             </div>
         </div>
+    </div>
+   <%--     lien he--%>
+        <div class="float-icon-hotline">
+   <ul>
+      <li class="hotline_float_icon">
+	      <a id="messengerButton" href="tel:0384997837" rel="noopener nofollow">
+	      	<i class="fa fa-phone animated infinite tada"></i>
+	      	<span>Hotline: 0384997837</span>
+	      </a>
+      </li>
+      <li class="hotline_float_icon">
+	      <a id="messengerButton" href="//zalo.me/0384997837" target="_blank" rel="noopener nofollow">
+		      <i class="fa fa-zalo animated infinite tada"></i>
+		      <span>Nhắn tin qua Zalo</span>
+	      </a>
+      </li>
+      <li class="hotline_float_icon">
+	      <a id="messengerButton" href="https://m.me/mackenodibay" target="_blank" rel="noopener nofollow">
+		      <i class="fa fa-fb animated infinite tada"></i>
+		      <span>Nhắn tin qua Facebook</span>
+	      </a>
+      </li>
+   </ul>
     </div>
 
     <!--chân trang-->

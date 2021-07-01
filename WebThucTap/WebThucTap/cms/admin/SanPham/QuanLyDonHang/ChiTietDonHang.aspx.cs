@@ -72,9 +72,9 @@ public partial class cms_admin_SanPham_QuanLyDonHang_ChiTietDonHang : System.Web
         return s;
     }
 
-    private string LayTenSanPhamTheoMaSP(string maSP)
+    private string LayTenSanPhamTheoMaSP(string maSP)   
     {
-        DataTable dt = Webbanhang.SanPham.Thongtin_Sanpham_by_id(maSP);
+        DataTable dt = SanPham.Thongtin_Sanpham_by_id(maSP);
         if (dt.Rows.Count>0)
             return dt.Rows[0]["TenSP"].ToString();
         return "";
